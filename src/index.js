@@ -36,6 +36,7 @@ app.use(
       "http://localhost:5173",
       "https://tangerine-biscotti-cdb273.netlify.app",
       "https://teal-phoenix-183758.netlify.app",
+      "https://grand-pasca-1c7d55.netlify.app",
     ],
     credentials: true,
   })
