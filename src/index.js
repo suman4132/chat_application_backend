@@ -33,11 +33,10 @@ app.use(morgan("dev"));
 app.use(cookieParser());
 
 // ✅ CORS setup to allow frontend access
-app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://grand-pasca-1c7d55.netlify.app",
+      process.env.FRONTEND_URL,
     ],
     credentials: true,
   })
