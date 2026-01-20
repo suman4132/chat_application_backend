@@ -32,7 +32,11 @@ app.use(cookieParser());
 // ✅ CORS setup to allow frontend access
 app.use(
   cors({
-    origin: "http://localhost:5173", // Your frontend origin
+    origin: [
+      "http://localhost:5173",
+      "https://tangerine-biscotti-cdb273.netlify.app",
+      "https://teal-phoenix-183758.netlify.app",
+    ],
     credentials: true,
   })
 );
