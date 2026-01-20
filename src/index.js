@@ -19,6 +19,9 @@ dotenv.config();
 const PORT = process.env.PORT || 5001;
 const __dirname = path.resolve();
 
+// ✅ Trust proxy (needed for secure cookies on Render/Heroku)
+app.set("trust proxy", 1);
+
 // ✅ Increase payload size limit (fix for PayloadTooLargeError)
 // ✅ Increase payload size limit (fix for PayloadTooLargeError)
 app.use(express.json({ limit: "50mb" }));
@@ -34,8 +37,6 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://tangerine-biscotti-cdb273.netlify.app",
-      "https://teal-phoenix-183758.netlify.app",
       "https://grand-pasca-1c7d55.netlify.app",
     ],
     credentials: true,
